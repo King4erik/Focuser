@@ -9,7 +9,7 @@
 - Full the blocked_apps.txt or use the gui script to full it with the title name or the executable name of the application in it
 - Use a #executable name or #title name to make it persistent through the session (the program will killed even after it is removed from the wordlist)
 
-# To make it into an exe
+# To build an exe
 Using Nuitka<br>
 ```nuitka --onefile --windows-console-mode=disable --nofollow-imports --clean-cache=all --output-dir="exe" --remove-output .\appblocker.py```
 <br>Using Pyinstaller<br>
