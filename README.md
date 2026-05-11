@@ -16,7 +16,7 @@ python appblocker.py
 ~~~
 python gui.py
 ~~~
-1. Type in the applications to be blocked in the wordlist
+1. Type in the applications to be blocked in the textbox
 2. Click "Start Focuser" button
 
 # To build an exe
