@@ -1,5 +1,6 @@
 # Focuser
 <b> I made this program for my IGCSE exams </b>
+<br>No external libraries is used
 
 # Features of the program
 - It kills the process specified in the blocked_apps.txt
