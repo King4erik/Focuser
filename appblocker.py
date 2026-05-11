@@ -71,7 +71,7 @@ def presistence_block(wordlist):
             if app not in presistence_list:
                 presistence_list.append(app)
 
-def check_wordlist(initial_file, current_titles):
+def check_wordlist(current_titles):
     with open(wordlist, 'r') as f:
         titles = [line.strip() for line in f if line.strip()]
 
@@ -152,7 +152,7 @@ def run(wordlist):
                 presistence_block(wordlist)
                 # print("[DEBUG] ", presistence_list)
 
-                if check_wordlist(wordlist, titles) is True:
+                if check_wordlist(titles) is True:
                     with open(wordlist, 'r') as f:
                         titles = [line.strip() for line in f if line.strip()]
                         print("\n[+] The wordlist has been updated")
@@ -166,8 +166,12 @@ def run(wordlist):
     except KeyboardInterrupt:
         print("\n[!!] Program ended by the user..")
 
+def main(wordlist):
+    presistence_block(wordlist)
+    run(wordlist)
+
 if __name__ == '__main__':
-    wordlist = 'D:/Programming/Python/Focuser/blocked_apps.txt'
+    wordlist = 'blocked_apps.txt'
 
     print("[+] The program has started")
     print("[*] The wordlist is specified in the destination: ", wordlist)
@@ -176,6 +180,4 @@ if __name__ == '__main__':
     print("\n[*] CTRL-C to exit the program")
 
     print('\n[*] These specific applications will be blocked:')
-    
-    presistence_block(wordlist)
-    run(wordlist)
+    main(wordlist)
