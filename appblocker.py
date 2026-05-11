@@ -13,7 +13,7 @@ import re
 
 presistence_list = []
 failed_list = []
-log_file = 'D:/Programming/Python/Focuser/Focuser_log.csv'
+log_file = 'Focuser_log.csv'
 
 def log(message):
     try:
