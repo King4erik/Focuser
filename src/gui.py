@@ -6,9 +6,9 @@ import threading
 import subprocess
 import os
 
-file = "blocked_apps.txt"
+file = "../blocked_apps.txt"
 wordlist = open(file, "r+")
-program_path = 'exe/appblocker.exe'
+program_path = '../exe/appblocker.exe'
 
 def program_start():
     if os.path.isfile(program_path):

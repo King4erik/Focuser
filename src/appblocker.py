@@ -13,7 +13,7 @@ import re
 
 presistence_list = []
 failed_list = []
-log_file = 'Focuser_log.csv'
+log_file = '../Focuser_log.csv'
 
 def log(message):
     try:
@@ -171,7 +171,7 @@ def main(wordlist):
     run(wordlist)
 
 if __name__ == '__main__':
-    wordlist = 'blocked_apps.txt'
+    wordlist = '../blocked_apps.txt'
 
     print("[+] The program has started")
     print("[*] The wordlist is specified in the destination: ", wordlist)

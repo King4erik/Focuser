@@ -8,7 +8,7 @@
 
 # How to use this program
 - Full the blocked_apps.txt or use the gui script to full it with the title name or the executable name of the application in it
-- Use a #executable name or #title name to make it persistent through the session (the program will killed even after it is removed from the wordlist)
+- Use a #executable name or #title name to make it persistent through the session (the program will get killed even if it is removed from the wordlist)
 
 # How to run this program
 ~~~
@@ -23,11 +23,11 @@ python gui.py
 # To build an exe
 Using Nuitka<br>
 ~~~
-nuitka --onefile --windows-console-mode=disable --nofollow-imports --clean-cache=all --output-dir="exe" --remove-output .\appblocker.py
+nuitka --onefile --windows-console-mode=disable --nofollow-imports --clean-cache=all --output-dir="exe" --remove-output .\src\appblocker.py
 ~~~
 <br>Using Pyinstaller<br>
 ~~~
-pyinstaller --onefile --noconsole --distpath "exe/" appblocker.py
+pyinstaller --onefile --noconsole --distpath "exe/" .\src\appblocker.py
 ~~~
 
 # To make the program start whenever the system starts
@@ -35,10 +35,10 @@ pyinstaller --onefile --noconsole --distpath "exe/" appblocker.py
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v Appblocker /t REG_SZ /d "exe\appblocker.exe"
 ~~~
 
-<h4>Note: if the commands didn't work. Try giving the complete file path and put the folder into an exclusion file</h3>
+<h4>Note: if the commands or program didn't work. Try giving the complete file path and put the folder into an exclusion file</h3>
 
 # TODO:
 - Make a better GUI
 - Create a build script with the command to place it in the startup
-- Make this more organized
+- ~~Make the files more organized~~
 - Make an option to allow users to use custom scripts for different purposes (some applications while studying or some while working)
