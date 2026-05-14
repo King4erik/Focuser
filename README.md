@@ -35,8 +35,8 @@ pyinstaller --onefile --noconsole --distpath "exe/" .\src\appblocker.py
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v Appblocker /t REG_SZ /d "exe\appblocker.exe"
 ~~~
 <b>Recommended: Create a shortcut of appblocker.exe and place it in the startup folder 
-<br>To open the startup folder
-      1. WIN + R
+<br>To open the startup folder<br>
+      1. WIN + R<br>
       2. Type "shell:startup" and click enter
 
 <h4>Note: if the commands or program didn't work. Try giving the complete file path and put the folder into an exclusion file</h3>
